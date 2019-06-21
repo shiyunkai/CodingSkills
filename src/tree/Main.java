@@ -34,7 +34,7 @@ public class Main {
 
         // 二分查找测试
         int[] arr = {1, 2, 10, 15, 100,101,120,130,150,200,201,202,203,205,206,400};
-        int result = binarySearch(arr,400);
+        int result = binarySearch(arr,401);
         System.out.println(result);
     }
 
@@ -184,7 +184,7 @@ public class Main {
             int m = a+(b-a)/2;  // (a+b)/2 may be overflow
             if(value<arr[m]){
                 // 若value<arr[m],将区间缩小为a,m，继续二分查找
-                b = m -1 ;
+                b = m;
             }else if(value>arr[m]){
                 // 若k>arr[m]，将区间缩小为m,b，继续二分查找
                 a = m + 1;
